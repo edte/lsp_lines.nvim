@@ -210,8 +210,6 @@ end
 function M.hide(namespace, bufnr)
     if vim.api.nvim_buf_is_valid(bufnr) then
         vim.api.nvim_buf_clear_namespace(bufnr, namespace, 0, -1)
-    else
-        vim.api.nvim_err_writeln("Invalid buffer id: " .. bufnr)
     end
 end
 
